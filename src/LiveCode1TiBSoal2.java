@@ -12,16 +12,18 @@ public class LiveCode1TiBSoal2 {
         double price = scanner.nextDouble();
 
         // PROCESS
-        String tld = oldEmail.substring(oldEmail.length()-4);
+        String tld = oldEmail.substring(oldEmail.lastIndexOf('.'));
         String newEmail = username+"@"+newDomain+tld;
         String newDomainWithTld = newDomain + tld;
+
         double priceTax = switch (tld) {
-            case "id" -> 75;
-            case ".com" -> 50;
-            case "25" -> 25;
+            case ".id" -> 0.75;
+            case ".com" -> 0.5;
+            case ".net" -> 0.25;
             default -> 0;
         };
-        double newPrice = price + price * priceTax/100;
+
+        double newPrice = price + price * priceTax;
 
         // OUTPUT
         System.out.println("Nama email baru: "+newEmail);
