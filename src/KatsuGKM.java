@@ -26,19 +26,20 @@ public class KatsuGKM {
         int durasiPembuatanMenit = scanner.nextInt();
 
         // PROCESS
-        int totalDurasiJam = jamPesan + (menitPesan + durasiPembuatanMenit) / 60;
+        int totalDurasiJam = (jamPesan + (menitPesan + durasiPembuatanMenit) / 60) % 24;
         int totalDurasiMenit = (menitPesan + durasiPembuatanMenit) % 60;
         int totalHarga = hargaMakanan1 * kuantitasMakanan1 + hargaMakanan2 * kuantitasMakanan2 + hargaMakanan3 * kuantitasMakanan3 + hargaMakanan4 * kuantitasMakanan4;
         double konversiYen = totalHarga / 103.0;
 
         // OUTPUT
-        String tableFormatter = "%-3s| %-25s | %-15d | %-15d |\n";
         System.out.println("=".repeat(68)); // BELUM DIAJARI .repeat()
-        System.out.printf("%68s\n", "KATSU GKM FILKOM UB");
-        System.out.printf("%68s\n", "PEMESAN : "+pemesan);
-        System.out.printf("%68s\n", "Jam : "+jamPesan+" Menit : "+menitPesan);
+        String formatterAtas = "%68s\n";
+        System.out.printf(formatterAtas, "KATSU GKM FILKOM UB");
+        System.out.printf(formatterAtas, "Pemesan : "+pemesan);
+        System.out.printf(formatterAtas, "Jam : "+jamPesan+" Menit : "+menitPesan);
         System.out.print('\n');
         System.out.printf("%-3s| %-25s | %-15s | %-15s |\n", "No.", "Nama Makanan", "Kuantitas", "Harga");
+        String tableFormatter = "%-3s| %-25s | %-15d | %-15d |\n";
         System.out.printf(tableFormatter, "1.", namaMakanan1, kuantitasMakanan1, hargaMakanan1);
         System.out.printf(tableFormatter, "2.", namaMakanan2, kuantitasMakanan2, hargaMakanan2);
         System.out.printf(tableFormatter, "3.", namaMakanan3, kuantitasMakanan3, hargaMakanan3);
