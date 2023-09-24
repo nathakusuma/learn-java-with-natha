@@ -28,7 +28,7 @@ public class KatsuGKM {
         // PROCESS
         int totalDurasiJam = (jamPesan + (menitPesan + durasiPembuatanMenit) / 60) % 24;
         int totalDurasiMenit = (menitPesan + durasiPembuatanMenit) % 60;
-        int totalHarga = hargaMakanan1 * kuantitasMakanan1 + hargaMakanan2 * kuantitasMakanan2 + hargaMakanan3 * kuantitasMakanan3 + hargaMakanan4 * kuantitasMakanan4;
+        long totalHarga = (long) hargaMakanan1 * kuantitasMakanan1 + (long) hargaMakanan2 * kuantitasMakanan2 + (long) hargaMakanan3 * kuantitasMakanan3 + (long) hargaMakanan4 * kuantitasMakanan4;
         double konversiYen = totalHarga / 103.0;
 
         // OUTPUT
