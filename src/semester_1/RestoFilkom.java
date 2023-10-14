@@ -1,4 +1,4 @@
-// TUGAS TI B
+package semester_1;// TUGAS TI B
 
 import java.util.Scanner;
 

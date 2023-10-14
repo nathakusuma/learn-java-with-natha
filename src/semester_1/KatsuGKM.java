@@ -1,4 +1,4 @@
-// Live coding TIF D Soal 2
+package semester_1;// Live coding TIF D Soal 2
 // Tidak boleh menggunakan percabangan dan perulangan
 
 import java.util.Scanner;

@@ -1,3 +1,5 @@
+package semester_1;
+
 import java.util.Scanner;
 
 public class Praktikum2TifDSoal2 {

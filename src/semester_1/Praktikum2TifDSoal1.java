@@ -1,4 +1,4 @@
-// MULAI JAM 19:10
+package semester_1;// MULAI JAM 19:10
 
 import java.util.Scanner;
 
