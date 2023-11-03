@@ -13,7 +13,6 @@ public class CheckPrimeNumber1 {
         boolean[] isPrime = new boolean[x+1];
         Arrays.fill(isPrime, true);
         for(int i = 2; i <= Math.sqrt(x); i++) {
-            if(isPrime[x]) break;
             if(isPrime[i]) {
                 for (int j = i*i; j <= x; j+=i) {
                     isPrime[j] = false;
